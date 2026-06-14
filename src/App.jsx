@@ -79,6 +79,7 @@ export default function App() {
 
       <section className="how">
         <div className="tag">Como funciona</div>
+        
 
         <h2>Siga a vida da sua comida.</h2>
 
@@ -111,6 +112,70 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      <section className="origin">
+  <div className="origin-text">
+    <div className="tag">A primeira quinta</div>
+
+    <h2>Ervas do Sol</h2>
+
+    <p>
+      Sou ucraniana e vivo em Portugal.
+      Durante muitos anos, a lavanda foi apenas uma imagem distante:
+      campos roxos algures na Provença, vistos a partir de um apartamento
+      no quinto andar, em Kyiv.
+    </p>
+
+    <p>
+      Hoje estou a criar o meu pequeno jardim de lavanda em Portugal.
+      O Ervas do Sol nasceu desse sonho antigo e da vontade de voltar
+      ao real: à terra, ao cheiro das plantas, às estações e às pequenas
+      histórias que crescem devagar.
+    </p>
+
+    <p>
+      Antes de ser uma plataforma, o Ervas do Sol é uma procura:
+      conhecer quem cultiva, acompanhar a vida das quintas e aproximar
+      as pessoas da origem dos seus alimentos.
+    </p>
+
+    <button className="primary">Ler a história completa 🌿</button>
+  </div>
+
+  <img
+    className="origin-image"
+    src="/beelavanda.jpg"
+    alt="Lavanda com abelha"
+  />
+</section>
+
+<section className="bee-section">
+  <div>
+    <div className="tag">Lavanda e abelhas</div>
+
+    <h2>Porque é que as abelhas gostam tanto da lavanda?</h2>
+
+    <p>
+      A lavanda floresce durante bastante tempo, tem um aroma intenso
+      e oferece néctar às abelhas. Para mim, vê-las entre as flores é
+      uma das imagens mais bonitas do jardim.
+    </p>
+
+    <p>
+      Elas lembram-me que a natureza não tem pressa.
+      Cada flor, cada estação e cada colheita têm o seu próprio tempo.
+    </p>
+  </div>
+
+  <div className="season-card">
+    <h3>Como passa a estação</h3>
+
+    <div className="season-step">🌱 Primavera — novos rebentos</div>
+    <div className="season-step">🪻 Início do verão — floração</div>
+    <div className="season-step">🐝 Verão — abelhas e aroma no ar</div>
+    <div className="season-step">✂️ Depois da floração — colheita e secagem</div>
+  </div>
+</section>
 
       <section className="section">
         <h2>O que procura hoje?</h2>
