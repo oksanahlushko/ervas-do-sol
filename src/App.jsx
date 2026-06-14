@@ -3,10 +3,10 @@ import { useState } from "react";
 
 const farms = [
   {
-    name: "Quinta da Maria",
+    name: "Ervas do Sol",
     place: "Leiria",
-    products: "Lavanda · Mel · Ervas",
-    tag: "🪻 Atualizado hoje",
+    products: "Lavanda · Chá Artesanal · Pequenos Ramos",
+    tag: "☀️ Quinta fundadora",
     image:
       "https://images.unsplash.com/photo-1499002238440-d264edd596ec?auto=format&fit=crop&w=900&q=80",
   },
@@ -15,8 +15,7 @@ const farms = [
     place: "Batalha",
     products: "Tomates · Pepinos · Legumes",
     tag: "🍅 Primeira colheita",
-    image:
-      "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=80",
+    image: "/beemain.jpg",
   },
   {
     name: "Quinta da Oliveira",
