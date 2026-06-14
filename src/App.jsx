@@ -1,13 +1,16 @@
 import "./App.css";
 import { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+
+import FarmPage from "./pages/FarmPage";
 
 const farms = [
   {
     name: "Ervas do Sol",
     place: "Leiria",
-    products: "Lavanda · Chá Artesanal · Pequenos Ramos",
+    products: "Chá de Lavanda · Ramos de Lavanda",
     tag: "☀️ Quinta fundadora",
-    image: "/quintabee.jpg"
+    image: "/quintabee.jpg",
   },
   {
     name: "Quinta do João",
@@ -27,7 +30,7 @@ const farms = [
   },
 ];
 
-export default function App() {
+function HomePage() {
   const [followed, setFollowed] = useState([]);
 
   const toggleFollow = (name) => {
@@ -45,40 +48,49 @@ export default function App() {
 
         <nav className="nav">
           <span>Quintas</span>
-          <span>Produtos</span>
           <span>Histórias</span>
-          <span>A Minha Quinta</span>
+          <span>Sobre o projeto</span>
+          <span>Para Quintas</span>
         </nav>
       </header>
 
       <section className="hero">
         <div>
-          <p className="eyebrow"> Uma comunidade de pequenas quintas portuguesas </p>
+          <p className="eyebrow">
+            Uma comunidade de pequenas quintas portuguesas
+          </p>
 
           <h1>Mais do que comida.</h1>
 
           <p className="subtitle">
-            Histórias, estações e pequenas quintas portuguesas. Descubra quem
-            cultiva, acompanhe as colheitas e escolha alimentos com história.
+            Ervas do Sol é uma comunidade de pequenas quintas portuguesas.
+            Conheça quem cultiva, acompanhe as colheitas e escolha alimentos
+            com história.
           </p>
 
           <div className="buttons">
             <button className="primary">Explorar Quintas 🌿</button>
 
-            <button className="secondary">❤️ Seguir Colheitas</button>
+            <a
+              className="secondary link-button"
+              href="https://tally.so/r/MeGrNA"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Tenho uma quinta
+            </a>
           </div>
         </div>
 
         <img
-  className="hero-image"
-  src="/beelavanda.jpg"
-  alt="Lavanda do Ervas do Sol"
-/>
+          className="hero-image"
+          src="/beelavanda.jpg"
+          alt="Lavanda do Ervas do Sol"
+        />
       </section>
 
       <section className="how">
         <div className="tag">Como funciona</div>
-        
 
         <h2>Siga a vida da sua comida.</h2>
 
@@ -113,68 +125,71 @@ export default function App() {
       </section>
 
       <section className="origin">
-  <div className="origin-text">
-    <div className="tag">A primeira quinta</div>
+        <div className="origin-text">
+          <div className="tag">A primeira quinta</div>
 
-    <h2>Ervas do Sol</h2>
+          <h2>Ervas do Sol</h2>
 
-    <p>
-      Sou ucraniana e vivo em Portugal.
-      Durante muitos anos, a lavanda foi apenas uma imagem distante:
-      campos roxos algures na Provença, vistos a partir de um apartamento
-      no quinto andar, em Kyiv.
-    </p>
+          <p>
+            Sou ucraniana e vivo em Portugal. Durante muitos anos, a lavanda foi
+            apenas uma imagem distante: campos roxos algures na Provença,
+            vistos a partir de um apartamento no quinto andar, em Kyiv.
+          </p>
 
-    <p>
-      Hoje estou a criar o meu pequeno jardim de lavanda em Portugal.
-      O Ervas do Sol nasceu desse sonho antigo e da vontade de voltar
-      ao real: à terra, ao cheiro das plantas, às estações e às pequenas
-      histórias que crescem devagar.
-    </p>
+          <p>
+            Hoje estou a criar o meu pequeno jardim de lavanda em Portugal. O
+            Ervas do Sol nasceu desse sonho antigo e da vontade de voltar ao
+            real: à terra, ao cheiro das plantas, às estações e às pequenas
+            histórias que crescem devagar.
+          </p>
 
-    <p>
-      Antes de ser uma plataforma, o Ervas do Sol é uma procura:
-      conhecer quem cultiva, acompanhar a vida das quintas e aproximar
-      as pessoas da origem dos seus alimentos.
-    </p>
+          <p>
+            Antes de ser uma plataforma, o Ervas do Sol é uma procura: conhecer
+            quem cultiva, acompanhar a vida das quintas e aproximar as pessoas
+            da origem dos seus alimentos.
+          </p>
 
-    <button className="primary">Ler a história completa 🌿</button>
-  </div>
+          <Link to="/farm/ervas-do-sol" className="primary link-button">
+            Ver a quinta 🌿
+          </Link>
+        </div>
 
-  <img
-    className="origin-image"
-    src="/beelavanda.jpg"
-    alt="Lavanda com abelha"
-  />
-</section>
+        <img
+          className="origin-image"
+          src="/beelavanda.jpg"
+          alt="Lavanda com abelha"
+        />
+      </section>
 
-<section className="bee-section">
-  <div>
-    <div className="tag">Lavanda e abelhas</div>
+      <section className="bee-section">
+        <div>
+          <div className="tag">Lavanda e abelhas</div>
 
-    <h2>Porque é que as abelhas gostam tanto da lavanda?</h2>
+          <h2>Porque é que as abelhas gostam tanto da lavanda?</h2>
 
-    <p>
-      A lavanda floresce durante bastante tempo, tem um aroma intenso
-      e oferece néctar às abelhas. Para mim, vê-las entre as flores é
-      uma das imagens mais bonitas do jardim.
-    </p>
+          <p>
+            A lavanda floresce durante bastante tempo, tem um aroma intenso e
+            oferece néctar às abelhas. Para mim, vê-las entre as flores é uma
+            das imagens mais bonitas do jardim.
+          </p>
 
-    <p>
-      Elas lembram-me que a natureza não tem pressa.
-      Cada flor, cada estação e cada colheita têm o seu próprio tempo.
-    </p>
-  </div>
+          <p>
+            Elas lembram-me que a natureza não tem pressa. Cada flor, cada
+            estação e cada colheita têm o seu próprio tempo.
+          </p>
+        </div>
 
-  <div className="season-card">
-    <h3>Como passa a estação</h3>
+        <div className="season-card">
+          <h3>Como passa a estação</h3>
 
-    <div className="season-step">🌱 Primavera — novos rebentos</div>
-    <div className="season-step">🪻 Início do verão — floração</div>
-    <div className="season-step">🐝 Verão — abelhas e aroma no ar</div>
-    <div className="season-step">✂️ Depois da floração — colheita e secagem</div>
-  </div>
-</section>
+          <div className="season-step">🌱 Primavera — novos rebentos</div>
+          <div className="season-step">🪻 Início do verão — floração</div>
+          <div className="season-step">🐝 Verão — abelhas e aroma no ar</div>
+          <div className="season-step">
+            ✂️ Depois da floração — colheita e secagem
+          </div>
+        </div>
+      </section>
 
       <section className="section">
         <h2>O que procura hoje?</h2>
@@ -201,7 +216,7 @@ export default function App() {
         <div className="grid">
           {farms.map((farm) => (
             <div className="card" key={farm.name}>
-              <img src={farm.image} className="card-image" alt="" />
+              <img src={farm.image} className="card-image" alt={farm.name} />
 
               <div className="card-body">
                 <div className="tag">{farm.tag}</div>
@@ -213,13 +228,21 @@ export default function App() {
                 <p>{farm.products}</p>
 
                 <button
-                  className={followed.includes(farm.name) ? "follow active" : "follow"}
+                  className={
+                    followed.includes(farm.name) ? "follow active" : "follow"
+                  }
                   onClick={() => toggleFollow(farm.name)}
                 >
                   {followed.includes(farm.name)
                     ? "A seguir ❤️"
                     : "Seguir quinta"}
                 </button>
+
+                {farm.name === "Ervas do Sol" && (
+                  <Link to="/farm/ervas-do-sol" className="farm-link">
+                    Ver Quinta →
+                  </Link>
+                )}
               </div>
             </div>
           ))}
@@ -277,5 +300,14 @@ export default function App() {
         <p>Feito com ❤️ em Portugal</p>
       </footer>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/farm/ervas-do-sol" element={<FarmPage />} />
+    </Routes>
   );
 }
