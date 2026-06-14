@@ -752,3 +752,409 @@ font-weight: 600;
   }
 
 }
+.nav a,
+.link-logo {
+  text-decoration: none;
+  color: inherit;
+}
+
+.active-nav {
+  color: var(--green);
+  font-weight: 700;
+  border-bottom: 2px solid var(--green);
+  padding-bottom: 8px;
+}
+
+.map-page {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.map-layout {
+  padding: 60px 8% 70px;
+}
+
+.map-intro {
+  max-width: 620px;
+  margin-bottom: 34px;
+}
+
+.map-intro h1 {
+  font-size: 64px;
+  line-height: 1.05;
+  color: var(--green);
+  margin: 16px 0 22px;
+}
+
+.map-intro p {
+  font-family: Arial, sans-serif;
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.map-content {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 42px;
+  align-items: start;
+}
+
+.map-card {
+  position: relative;
+  min-height: 680px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.1);
+  background:
+    radial-gradient(circle at 20% 40%, #b8d7e8 0 20%, transparent 21%),
+    radial-gradient(circle at 70% 45%, #cbdcb3 0 28%, transparent 29%),
+    linear-gradient(135deg, #b7d7e7 0%, #d7e2c2 45%, #eef1dc 100%);
+}
+
+.map-card::after {
+  content: "PORTUGAL";
+  position: absolute;
+  top: 48%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  font-size: 42px;
+  letter-spacing: 12px;
+  color: rgba(63, 81, 44, 0.35);
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
+
+.map-controls {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 3;
+  display: grid;
+}
+
+.map-controls button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.map-label {
+  position: absolute;
+  z-index: 3;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  color: #2f2a22;
+}
+
+.porto {
+  top: 76px;
+  left: 52%;
+}
+
+.coimbra {
+  top: 210px;
+  left: 62%;
+}
+
+.leiria {
+  top: 345px;
+  left: 47%;
+}
+
+.lisboa {
+  bottom: 125px;
+  left: 43%;
+}
+
+.map-pin {
+  position: absolute;
+  z-index: 4;
+  width: 62px;
+  height: 62px;
+  background: var(--green);
+  color: white;
+  border: 5px solid white;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.map-pin {
+  transform-origin: center;
+}
+
+.map-pin::before {
+  content: "";
+}
+
+.map-pin {
+  line-height: 1;
+}
+
+.map-pin {
+  padding: 8px;
+}
+
+.map-pin {
+  text-align: center;
+}
+
+.map-pin {
+  font-family: Arial, sans-serif;
+}
+
+.map-pin {
+  filter: none;
+}
+
+.map-pin {
+  rotate: 0deg;
+}
+
+.pin-leiria {
+  top: 310px;
+  left: 50%;
+}
+
+.pin-batalha {
+  top: 430px;
+  left: 57%;
+}
+
+.pin-alcobaca {
+  top: 520px;
+  left: 66%;
+}
+
+.pin-marinha {
+  top: 280px;
+  left: 43%;
+}
+
+.map-legend {
+  position: absolute;
+  left: 28px;
+  bottom: 28px;
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 20px 24px;
+  border-radius: 22px;
+  display: grid;
+  gap: 12px;
+  font-family: Arial, sans-serif;
+  color: var(--green);
+}
+
+.farm-list {
+  display: grid;
+  gap: 18px;
+}
+
+.found-count {
+  font-family: Arial, sans-serif;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.map-farm-card {
+
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 180px 1fr;
+
+  gap: 28px;
+
+  align-items: center;
+
+  background: white;
+
+  border-radius: 32px;
+
+  padding: 30px;
+
+  box-shadow: 0 14px 40px rgba(0,0,0,.07);
+
+}
+
+.map-farm-card img {
+
+  width: 180px;
+
+  height: 180px;
+
+  object-fit: cover;
+
+  border-radius: 28px;
+
+}
+
+.map-farm-card h3 {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 32px;
+
+  color: var(--green);
+
+  margin: 0 0 18px;
+
+}
+
+.map-farm-card p {
+
+  font-family: Arial, sans-serif;
+
+  font-size: 20px;
+
+  color: var(--muted);
+
+  line-height: 1.5;
+
+  margin: 10px 0;
+
+}
+
+.map-farm-card button,
+.mini-link-button {
+
+  display: inline-block;
+
+  margin-top: 18px;
+
+  background: #dfe8d2;
+
+  color: var(--green);
+
+  padding: 14px 28px;
+
+  border-radius: 18px;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+
+  font-weight: 700;
+
+}
+
+.heart {
+
+  position: absolute;
+
+  top: 28px;
+
+  right: 28px;
+
+  font-size: 34px;
+
+  color: #6d655b;
+
+}
+
+.map-values {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.map-values div {
+  background: var(--white);
+  border-radius: 28px;
+  padding: 26px;
+}
+
+.map-values span {
+  font-size: 36px;
+}
+
+.map-values h3 {
+  color: var(--green);
+  margin-bottom: 8px;
+}
+
+.map-values p {
+  font-family: Arial, sans-serif;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+  .map-content,
+  .map-values {
+    grid-template-columns: 1fr;
+  }
+
+  .map-intro h1 {
+    font-size: 46px;
+  }
+
+  .map-card {
+    min-height: 520px;
+  }
+
+  .map-farm-card {
+    grid-template-columns: 120px 1fr;
+  }
+
+  .map-farm-card img {
+    width: 120px;
+  }
+}
+
+.map-farm-card {
+  grid-template-columns: 130px 1fr;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 24px;
+  align-items: center;
+  text-align: left;
+}
+
+.map-farm-card img {
+  width: 130px;
+  height: 110px;
+  border-radius: 18px;
+}
+
+.map-farm-card h3 {
+  font-size: 22px;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  padding-right: 32px;
+}
+
+.map-farm-card p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 5px 0;
+}
+
+.mini-link-button,
+.map-farm-card button {
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+.heart {
+  top: 18px;
+  right: 18px;
+  font-size: 24px;
+}

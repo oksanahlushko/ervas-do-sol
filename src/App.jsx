@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
 import FarmPage from "./pages/FarmPage";
+import MapPage from "./pages/MapPage";
 
 const farms = [
   {
@@ -10,7 +11,7 @@ const farms = [
     place: "Leiria",
     products: "Chá de Lavanda · Ramos de Lavanda",
     tag: "☀️ Quinta fundadora",
-    image: "/quintabee.jpg",
+    image: "/beelavanda.jpg",
   },
   {
     name: "Quinta do João",
@@ -44,13 +45,18 @@ function HomePage() {
   return (
     <div className="page">
       <header className="header">
-        <div className="logo">🪻 Ervas do Sol</div>
+        <Link to="/" className="logo link-logo">
+          🪻 Ervas do Sol
+        </Link>
 
         <nav className="nav">
           <span>Quintas</span>
+          <Link to="/mapa">Mapa das quintas</Link>
           <span>Histórias</span>
           <span>Sobre o projeto</span>
-          <span>Para Quintas</span>
+          <a href="https://tally.so/r/MeGrNA" target="_blank" rel="noreferrer">
+            Para Quintas
+          </a>
         </nav>
       </header>
 
@@ -69,7 +75,9 @@ function HomePage() {
           </p>
 
           <div className="buttons">
-            <button className="primary">Explorar Quintas 🌿</button>
+            <Link to="/mapa" className="primary link-button">
+              Explorar Quintas 🌿
+            </Link>
 
             <a
               className="secondary link-button"
@@ -308,6 +316,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/farm/ervas-do-sol" element={<FarmPage />} />
+      <Route path="/mapa" element={<MapPage />} />
     </Routes>
   );
 }
