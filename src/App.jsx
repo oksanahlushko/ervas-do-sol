@@ -54,7 +54,7 @@ export default function App() {
 
       <section className="hero">
         <div>
-          <p className="eyebrow">Versão beta · Quintas locais de Portugal</p>
+          <p className="eyebrow"> Uma comunidade de pequenas quintas portuguesas </p>
 
           <h1>Mais do que comida.</h1>
 
