@@ -7,15 +7,15 @@ const farms = [
     place: "Leiria",
     products: "Lavanda · Chá Artesanal · Pequenos Ramos",
     tag: "☀️ Quinta fundadora",
-    image:
-      "https://images.unsplash.com/photo-1499002238440-d264edd596ec?auto=format&fit=crop&w=900&q=80",
+    image: "/quintabee.jpg"
   },
   {
     name: "Quinta do João",
     place: "Batalha",
     products: "Tomates · Pepinos · Legumes",
     tag: "🍅 Primeira colheita",
-    image: "/beemain.jpg",
+    image:
+      "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=80",
   },
   {
     name: "Quinta da Oliveira",
