@@ -5,20 +5,24 @@ export default function SobrePage() {
   return (
     <div className="sobre-page">
       <header className="header">
-        <Link to="/" className="logo link-logo">
-        <span className="logo-icon">🌿</span>
-       <span>Ervas do Sol</span>
-       </Link>
+  <Link to="/" className="logo link-logo">
+    <span className="logo-icon">🌿</span>
+    <span>Ervas do Sol</span>
+  </Link>
 
-        <nav className="nav">
-          <Link to="/">Quintas</Link>
-          <span>Produtos</span>
-          <Link to="/mapa">Mapa das quintas</Link>
-          <Link to="/sobre" className="active-nav">
-            Sobre nós
-          </Link>
-        </nav>
-      </header>
+  <input type="checkbox" id="mobile-menu-toggle" className="mobile-menu-toggle" />
+
+  <label htmlFor="mobile-menu-toggle" className="mobile-menu-button">
+    ☰
+  </label>
+
+  <nav className="nav">
+    <Link to="/">Quintas</Link>
+    <span>Produtos</span>
+    <Link to="/mapa">Mapa das quintas</Link>
+    <Link to="/sobre">Sobre nós</Link>
+  </nav>
+</header>
 
       <section className="sobre-hero">
         <div className="sobre-hero-text">
