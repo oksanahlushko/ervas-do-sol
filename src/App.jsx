@@ -4,6 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 
 import FarmPage from "./pages/FarmPage";
 import MapPage from "./pages/MapPage";
+import SobrePage from "./pages/SobrePage";
 
 const farms = [
   {
@@ -78,18 +79,9 @@ const productTags = [
 ];
 
 function HomePage() {
-  const [followed, setFollowed] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("all");
   const [onlyPreorder, setOnlyPreorder] = useState(false);
-
-  const toggleFollow = (name) => {
-    if (followed.includes(name)) {
-      setFollowed(followed.filter((farmName) => farmName !== name));
-    } else {
-      setFollowed([...followed, name]);
-    }
-  };
 
   const chooseCategory = (category) => {
     if (searchTerm === category) {
@@ -136,54 +128,63 @@ function HomePage() {
   return (
     <div className="page">
       <header className="header">
-        <Link to="/" className="logo link-logo">
-          🪻 Ervas do Sol
-        </Link>
+  <Link to="/" className="logo link-logo">
+    <span className="logo-icon">🌿</span>
+    <span>Ervas do Sol</span>
+  </Link>
 
-        <nav className="nav">
-        <span>Quintas</span>
-        <span>Produtos</span>
-        <Link to="/mapa">Mapa das quintas</Link>
-        <span>Sobre nós</span>
-        </nav>
-      </header>
+  <input type="checkbox" id="mobile-menu-toggle" className="mobile-menu-toggle" />
 
-      <section className="hero">
-        <div>
-          <p className="eyebrow">
-            Uma comunidade de pequenas quintas portuguesas
-          </p>
+  <label htmlFor="mobile-menu-toggle" className="mobile-menu-button">
+    ☰
+  </label>
 
-          <h1>Mais do que comida.</h1>
+  <nav className="nav">
+    <Link to="/">Quintas</Link>
+    <span>Produtos</span>
+    <Link to="/mapa">Mapa das quintas</Link>
+    <Link to="/sobre">Sobre nós</Link>
+  </nav>
+</header>
 
-          <p className="subtitle">
-            Ervas do Sol é uma comunidade de pequenas quintas portuguesas.
-            Conheça quem cultiva, acompanhe as colheitas e escolha alimentos
-            com história.
-          </p>
+      <section className="hero hero-new">
+  <div className="hero-content">
+    <h1>Mais do que comida.</h1>
 
-          <div className="buttons">
-            <Link to="/mapa" className="primary link-button">
-              Explorar Quintas 🌿
-            </Link>
+    <div className="hero-points">
+      <p>🌿 Conheça quem cultiva.</p>
+      <p>🌿 Acompanhe as colheitas.</p>
+      <p>🌿 Descubra produtos locais com história.</p>
+    </div>
 
-            <a
-              className="secondary link-button"
-              href="https://tally.so/r/MeGrNA"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Tenho uma quinta
-            </a>
-          </div>
-        </div>
+    <p className="subtitle hero-description">
+      Do primeiro broto até à sua mesa, queremos aproximá-lo das pequenas
+      quintas portuguesas e das pessoas que fazem nascer cada produto com
+      tempo, dedicação e amor pela terra.
+    </p>
 
-        <img
-          className="hero-image"
-          src="/beelavanda.jpg"
-          alt="Lavanda do Ervas do Sol"
-        />
-      </section>
+    <p className="hero-final-line">Siga a vida da sua comida. 🌿</p>
+
+    <div className="buttons">
+      <Link to="/mapa" className="primary link-button">
+        Explorar Quintas 🌿
+      </Link>
+
+      <a
+        className="secondary link-button"
+        href="https://tally.so/r/MeGrNA"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Tenho uma quinta
+      </a>
+    </div>
+  </div>
+
+  <div className="hero-image-shape">
+    <img src="/beelavanda.jpg" alt="Lavanda do Ervas do Sol" />
+  </div>
+</section>
 
       <section className="home-search">
         <div className="home-search-panel">
@@ -327,150 +328,27 @@ function HomePage() {
         )}
       </section>
 
-      <section className="how">
-        <div className="tag">Como funciona</div>
+      <section className="home-farm-cta">
+  <div className="home-farm-cta-content">
+    <div className="tag home-farm-cta-tag">Para quintas</div>
 
-        <h2>Siga a vida da sua comida.</h2>
+    <h2>Tem uma quinta?</h2>
 
-        <div className="how-grid">
-          <div className="how-card">
-            <div className="how-icon">🌿</div>
-            <h3>Descubra a quinta</h3>
-            <p>
-              Encontre pequenas quintas portuguesas perto de si e conheça quem
-              cultiva.
-            </p>
-          </div>
+    <p>
+      Se cultiva ou produz em pequena escala, gostaríamos muito de conhecer
+      a sua história.
+    </p>
+  </div>
 
-          <div className="how-card">
-            <div className="how-icon">🌱</div>
-            <h3>Siga a colheita</h3>
-            <p>
-              Acompanhe o que foi plantado, quando floresceu e quando estará
-              disponível.
-            </p>
-          </div>
-
-          <div className="how-card">
-            <div className="how-icon">📦</div>
-            <h3>Receba com história</h3>
-            <p>
-              Compre ou reserve produtos locais sabendo de onde vêm e quando
-              foram colhidos.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="origin">
-        <div className="origin-text">
-          <div className="tag">A primeira quinta</div>
-
-          <h2>Ervas do Sol</h2>
-
-          <p>
-            Sou ucraniana e vivo em Portugal. Durante muitos anos, a lavanda foi
-            apenas uma imagem distante: campos roxos algures na Provença, vistos
-            a partir de um apartamento no quinto andar, em Kyiv.
-          </p>
-
-          <p>
-            Hoje estou a criar o meu pequeno jardim de lavanda em Portugal. O
-            Ervas do Sol nasceu desse sonho antigo e da vontade de voltar ao
-            real: à terra, ao cheiro das plantas, às estações e às pequenas
-            histórias que crescem devagar.
-          </p>
-
-          <p>
-            Antes de ser uma plataforma, o Ervas do Sol é uma procura: conhecer
-            quem cultiva, acompanhar a vida das quintas e aproximar as pessoas
-            da origem dos seus alimentos.
-          </p>
-
-          <Link to="/farm/ervas-do-sol" className="primary link-button">
-            Ver a quinta 🌿
-          </Link>
-        </div>
-
-        <img
-          className="origin-image"
-          src="/beelavanda.jpg"
-          alt="Lavanda com abelha"
-        />
-      </section>
-
-      <section className="bee-section">
-        <div>
-          <div className="tag">Lavanda e abelhas</div>
-
-          <h2>Porque é que as abelhas gostam tanto da lavanda?</h2>
-
-          <p>
-            A lavanda floresce durante bastante tempo, tem um aroma intenso e
-            oferece néctar às abelhas. Para mim, vê-las entre as flores é uma
-            das imagens mais bonitas do jardim.
-          </p>
-
-          <p>
-            Elas lembram-me que a natureza não tem pressa. Cada flor, cada
-            estação e cada colheita têm o seu próprio tempo.
-          </p>
-        </div>
-
-        <div className="season-card">
-          <h3>Como passa a estação</h3>
-
-          <div className="season-step">🌱 Primavera — novos rebentos</div>
-          <div className="season-step">🪻 Início do verão — floração</div>
-          <div className="season-step">🐝 Verão — abelhas e aroma no ar</div>
-          <div className="season-step">
-            ✂️ Depois da floração — colheita e secagem
-          </div>
-        </div>
-      </section>
-
-      <section className="my-quinta">
-        <div className="tag">❤️ A Minha Quinta</div>
-
-        <h2>As quintas que segue</h2>
-
-        {followed.length === 0 ? (
-          <p className="subtitle">Ainda não segue nenhuma quinta.</p>
-        ) : (
-          <div className="followed-list">
-            {followed.map((farm) => (
-              <div className="followed-item" key={farm}>
-                🌿 {farm}
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
-
-      <section className="cta">
-        <div>
-          <div className="tag">Para produtores locais</div>
-
-          <h2>Conheça quem cultiva.</h2>
-
-          <p className="subtitle">
-            Estamos a criar um espaço para pequenas quintas portuguesas
-            partilharem as suas histórias, colheitas e produtos.
-            <br />
-            <br />
-            Se tem uma quinta, gostaríamos muito de a conhecer ❤️
-          </p>
-        </div>
-
-        <a
-          className="primary link-button"
-          href="https://tally.so/r/MeGrNA"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Quero contar a minha história 🌿
-        </a>
-      </section>
+  <a
+    className="home-farm-cta-button"
+    href="https://tally.so/r/MeGrNA"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Contar a minha história 🌿
+  </a>
+</section>
 
       <footer className="footer">
         <div className="logo">🪻 Ervas do Sol</div>
@@ -489,6 +367,7 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/farm/ervas-do-sol" element={<FarmPage />} />
       <Route path="/mapa" element={<MapPage />} />
+      <Route path="/sobre" element={<SobrePage />} />
     </Routes>
   );
 }

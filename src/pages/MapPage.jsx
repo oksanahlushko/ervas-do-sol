@@ -44,7 +44,8 @@ export default function MapPage() {
     <div className="map-page">
       <header className="header">
         <Link to="/" className="logo link-logo">
-          🪻 Ervas do Sol
+        <span className="logo-icon">🌿</span>
+        <span>Ervas do Sol</span>
         </Link>
 
         <nav className="nav">
