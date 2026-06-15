@@ -48,13 +48,11 @@ export default function MapPage() {
         </Link>
 
         <nav className="nav">
-          <Link to="/">Quintas</Link>
-          <span>Produtos</span>
-          <span className="active-nav">Mapa das quintas</span>
-          <span>Sobre nós</span>
-          <a href="https://tally.so/r/MeGrNA" target="_blank" rel="noreferrer">
-            Para Quintas
-          </a>
+        <Link to="/">Quintas</Link>
+        <span>Produtos</span>
+        <Link to="/mapa" className="active-nav">
+        Mapa das quintas </Link>
+        <span>Sobre nós</span>
         </nav>
       </header>
 
