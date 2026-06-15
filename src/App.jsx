@@ -5,6 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import FarmPage from "./pages/FarmPage";
 import MapPage from "./pages/MapPage";
 import SobrePage from "./pages/SobrePage";
+import ProductPage from "./pages/ProductPage";
 
 const farms = [
   {
@@ -365,9 +366,17 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+
       <Route path="/farm/ervas-do-sol" element={<FarmPage />} />
+      <Route path="/quintas/ervas-do-sol" element={<FarmPage />} />
+
       <Route path="/mapa" element={<MapPage />} />
       <Route path="/sobre" element={<SobrePage />} />
+
+      <Route
+        path="/quintas/ervas-do-sol/produtos/cha-de-lavanda"
+        element={<ProductPage />}
+      />
     </Routes>
   );
 }

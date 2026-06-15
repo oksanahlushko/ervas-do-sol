@@ -107,9 +107,10 @@ export default function FarmPage() {
                 📅 Disponível a partir de 24 de junho
               </p>
 
-              <button className="product-button preorder-button" type="button">
-                Pré-reservar
-              </button>
+              <Link
+  to="/quintas/ervas-do-sol/produtos/cha-de-lavanda"
+  className="product-button preorder-button">Ver produto
+</Link>
             </div>
           </div>
 
