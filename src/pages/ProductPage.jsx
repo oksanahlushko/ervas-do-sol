@@ -1,5 +1,6 @@
 import "../App.css";
 import { Link } from "react-router-dom";
+import { Flower2, SunMedium, CupSoda } from "lucide-react";
 
 const relatedProducts = [
   {
@@ -87,14 +88,44 @@ export default function ProductPage() {
   Colhidas em pequena escala e secas naturalmente, com tempo e cuidado.
             </p>
 
-            <div className="product-availability-card">
-  <div>
-    <span className="product-status drying-status">● Em secagem</span>
+            <div className="product-status-timeline">
+  <div className="timeline-step done">
+    <div className="timeline-icon">
+      <Flower2 size={24} strokeWidth={1.8} />
+    </div>
+
+    <div className="timeline-content">
+      <span className="timeline-label">Flor colhida</span>
+      <p>Lavanda colhida à mão</p>
+    </div>
   </div>
 
-  <div>
-    <p>Pronto a partir de</p>
-    <strong>24 de junho</strong>
+  <div className="timeline-line active"></div>
+
+  <div className="timeline-step active">
+    <div className="timeline-icon">
+      <SunMedium size={24} strokeWidth={1.8} />
+    </div>
+
+    <div className="timeline-content">
+      <span className="timeline-label">Secagem natural</span>
+      <p>A secar lentamente</p>
+    </div>
+  </div>
+
+  <div className="timeline-line"></div>
+
+  <div className="timeline-step upcoming">
+    <div className="timeline-icon">
+      <CupSoda size={24} strokeWidth={1.8} />
+    </div>
+
+    <div className="timeline-content">
+      <span className="timeline-label">Pronta para infusão</span>
+      <p>
+        A partir de <strong>24 de junho</strong>
+      </p>
+    </div>
   </div>
 </div>
 

@@ -2898,3 +2898,96 @@ button {
   font-size: 15px;
   font-weight: 800;
 }
+/* PRODUCT STATUS TIMELINE WITH ICONS */
+
+.product-status-timeline {
+  max-width: 560px;
+  margin: 0 0 30px;
+  padding: 22px 24px;
+  background: rgba(255, 253, 248, 0.82);
+  border: 1px solid #eadfce;
+  border-radius: 26px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.timeline-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.timeline-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee8dd;
+  color: var(--muted);
+}
+
+.timeline-label {
+  display: block;
+  margin-bottom: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.timeline-content strong {
+  color: var(--lavender);
+}
+
+.timeline-line {
+  flex: 0 0 42px;
+  height: 2px;
+  margin-top: 23px;
+  background: #d8d2c8;
+  border-radius: 999px;
+}
+
+.timeline-line.active {
+  background: linear-gradient(90deg, var(--green), #d66a1d);
+}
+
+.timeline-step.done .timeline-icon {
+  background: #edf4e6;
+  color: var(--green);
+}
+
+.timeline-step.done .timeline-label {
+  color: var(--green);
+}
+
+.timeline-step.active .timeline-icon {
+  background: #fff0e4;
+  color: #d66a1d;
+  box-shadow: 0 0 0 6px rgba(214, 106, 29, 0.1);
+}
+
+.timeline-step.active .timeline-label {
+  color: #d66a1d;
+}
+
+.timeline-step.upcoming .timeline-icon {
+  background: #f4ecfb;
+  color: var(--lavender);
+}
+
+.timeline-step.upcoming .timeline-label {
+  color: var(--lavender);
+}
