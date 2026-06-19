@@ -155,13 +155,11 @@ function HomePage() {
     <div className="hero-points">
       <p>🌿 Conheça quem cultiva.</p>
       <p>🌿 Acompanhe as colheitas.</p>
-      <p>🌿 Descubra produtos locais com história.</p>
+      <p>🌿 Escolha produtos locais com história.</p>
     </div>
 
     <p className="subtitle hero-description">
-      Do primeiro broto até à sua mesa, queremos aproximá-lo das pequenas
-      quintas portuguesas e das pessoas que fazem nascer cada produto com
-      tempo, dedicação e amor pela terra.
+      Do primeiro rebento até à sua mesa, mostramos as pessoas, as estações e as pequenas histórias por trás de cada produto local.
     </p>
 
     <p className="hero-final-line">Siga a vida da sua comida. 🌿</p>
@@ -183,7 +181,7 @@ function HomePage() {
   </div>
 
   <div className="hero-image-shape">
-    <img src="/beelavanda.jpg" alt="Lavanda do Ervas do Sol" />
+    <img src="/tomato.jpeg" alt="Lavanda do Ervas do Sol" />
   </div>
 </section>
 
